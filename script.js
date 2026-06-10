@@ -31,6 +31,11 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
   const business = document.getElementById('business').value.trim();
   const turnover = document.getElementById('turnover').value;
   const problem = document.getElementById('problem').value.trim();
+  const params = new URLSearchParams(window.location.search);
+
+  const utm_source = params.get('utm_source') || '';
+  const utm_campaign = params.get('utm_campaign') || '';
+  const utm_content = params.get('utm_content') || '';
 
   if (!name || !phone || !business || !turnover) {
     alert('Пожалуйста, заполните обязательные поля.');
@@ -42,12 +47,15 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
     phone,
     business,
     turnover,
-    problem
+    problem,
+    utm_source,
+    utm_campaign,
+    utm_content
   };
 
   try {
     await fetch(
-      'https://script.google.com/macros/s/AKfycby1JFUZox_hxd-ndaiNTjXlXjpK4Q_SaYefp3N25XycIxdqI9Q3calkpjpfCM2xUkOJ6g/exec',
+      'https://script.google.com/macros/s/AKfycbwPgAqvxZkUTirDJ7z3UJ9sAhBWCCX4QH_0UXPa2ZahwKLzRLdSbi3kNpic42B69FZwpA/exec',
       {
         method: 'POST',
         mode: 'no-cors',
