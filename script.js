@@ -68,7 +68,9 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
   } catch (error) {
     console.error('Ошибка отправки в таблицу:', error);
   }
-
+if (typeof fbq !== 'undefined') {
+  fbq('track', 'Lead');
+}
   const text =
     `Здравствуйте! Хочу пройти бесплатную диагностику бизнеса.%0A%0A` +
     `Имя: ${encodeURIComponent(name)}%0A` +
