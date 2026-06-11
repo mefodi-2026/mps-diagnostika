@@ -54,7 +54,7 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
   };
 
   try {
-    await fetch(
+    fetch(
       'https://script.google.com/macros/s/AKfycbwPgAqvxZkUTirDJ7z3UJ9sAhBWCCX4QH_0UXPa2ZahwKLzRLdSbi3kNpic42B69FZwpA/exec',
       {
         method: 'POST',
