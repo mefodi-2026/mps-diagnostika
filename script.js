@@ -77,7 +77,6 @@ if (typeof gtag !== 'undefined') {
     method: 'website'
   });
 }
-}
   const text =
     `Здравствуйте! Хочу пройти бесплатную диагностику бизнеса.%0A%0A` +
     `Имя: ${encodeURIComponent(name)}%0A` +
