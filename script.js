@@ -71,6 +71,13 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
 if (typeof fbq !== 'undefined') {
   fbq('track', 'Lead');
 }
+
+if (typeof gtag !== 'undefined') {
+  gtag('event', 'generate_lead', {
+    method: 'website'
+  });
+}
+}
   const text =
     `Здравствуйте! Хочу пройти бесплатную диагностику бизнеса.%0A%0A` +
     `Имя: ${encodeURIComponent(name)}%0A` +
