@@ -69,7 +69,7 @@ if (leadForm) {
     };
 
     const text =
-      `Здравствуйте! Хочу пройти бесплатную диагностику бизнеса.%0A%0A` +
+      `Здравствуйте! Хочу пройти диагностику бизнеса.%0A%0A` +
       `Имя: ${encodeURIComponent(name)}%0A` +
       `WhatsApp: ${encodeURIComponent(phone)}%0A` +
       `Сфера бизнеса: ${encodeURIComponent(business)}%0A` +
